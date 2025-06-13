@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+pydantic
+requests
+openai
+torch
+transformers
+selenium
+selenium-stealth
+undetected-chromedriver

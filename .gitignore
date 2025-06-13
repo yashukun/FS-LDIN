@@ -1,0 +1,11 @@
+test.py
+test2.py
+reference.py
+# Ignore Python bytecode files
+*.pyc  
+# Ignore Python cache directories
+__pycache__/
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+# Ignore virtual environment directories
+.venv/
