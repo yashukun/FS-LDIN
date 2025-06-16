@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AI LinkedIn Comment</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      padding: 18px 16px 14px 16px;
+      width: 290px;
+      background: #f7fafd;
+      color: #222;
+      border-radius: 12px;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    label {
+      font-weight: 500;
+      margin-top: 10px;
+      margin-bottom: 2px;
+      display: block;
+      color: #2d3a4a;
+      letter-spacing: 0.01em;
+    }
+    input[type="text"], select, textarea {
+      width: 100%;
+      padding: 8px 10px;
+      margin: 4px 0 10px 0;
+      border: 1px solid #d1d9e6;
+      border-radius: 6px;
+      font-size: 15px;
+      background: #fff;
+      transition: border 0.2s;
+      box-sizing: border-box;
+    }
+    input[type="text"]:focus, select:focus, textarea:focus {
+      border-color: #0073b1;
+      outline: none;
+      background: #f0f6fb;
+    }
+    button {
+      width: 100%;
+      padding: 10px 0;
+      background: linear-gradient(90deg, #0073b1 60%, #005983 100%);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 8px;
+      margin-bottom: 12px;
+      box-shadow: 0 1px 4px rgba(0,115,177,0.08);
+      transition: background 0.2s, box-shadow 0.2s;
+    }
+    button:hover {
+      background: linear-gradient(90deg, #005983 60%, #0073b1 100%);
+      box-shadow: 0 2px 8px rgba(0,115,177,0.13);
+    }
+    textarea {
+      height: 70px;
+      resize: vertical;
+      background: #f5f8fa;
+      color: #333;
+      font-size: 15px;
+      border: 1px solid #d1d9e6;
+      border-radius: 6px;
+      margin-bottom: 0;
+    }
+    #output {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      font-size: 15px;
+      color: #2d3a4a;
+      background: #f0f6fb;
+      border: 1px solid #b7c9d9;
+      margin-top: 4px;
+      margin-bottom: 0;
+    }
+    ::placeholder {
+      color: #b7c9d9;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <label for="provider">Provider:</label>
+  <select id="provider">
+    <option value="openai">OpenAI</option>
+    <option value="hf">Hugging Face</option>
+  </select>
+  <label for="token">API Token:</label>
+  <input type="text" id="token" placeholder="Your API Token" />
+  <label for="post_url">LinkedIn Post URL:</label>
+  <input type="text" id="post_url" placeholder="https://www.linkedin.com/posts/..." />
+  <button id="generate">Generate Comment</button>
+  <label for="output">Suggested Comment:</label>
+  <textarea id="output" readonly></textarea>
+  <script src="popup.js"></script>
+</body>
+</html>

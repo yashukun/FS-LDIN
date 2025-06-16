@@ -23,7 +23,7 @@ def generate_comment_openai(caption: str, token: str) -> str:
 
         # Call GPT-4o-mini model
         completion = client.chat.completions.create(
-            model="gpt-4o-nano",
+            model="gpt-4o-mini",
             messages=[
                 {"role": "user", "content": prompt}
             ]
