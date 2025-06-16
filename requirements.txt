@@ -8,3 +8,10 @@ transformers
 selenium
 selenium-stealth
 undetected-chromedriver
+# Optional: for type hints and regex (already in stdlib, but for completeness)
+# typing
+# re
+# random
+# If using reference.py for local generation, ensure torch and transformers are up to date
+# torch>=2.0.0
+# transformers>=4.30.0
